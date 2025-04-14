@@ -34,3 +34,26 @@ book2.displayBookInfo()
 book3.displayBookInfo()
 
 book1.borrowBook()
+
+#polymorphism
+class Car:
+    def move(self):
+        print("Driving a car")
+class Bicycle:
+    def move(self):
+        print("Riding a bicycle")           
+class Plane:
+    def move(self):
+        print("Flying a plane")
+
+def make_it_move(entity):
+    entity.move()
+
+# Create objects
+my_car = Car()
+my_plane = Plane()
+my_bicycle = Bicycle()  
+
+make_it_move(my_car)
+make_it_move(my_plane)
+make_it_move(my_bicycle)
